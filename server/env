@@ -1,0 +1,7 @@
+MONGODB_URI=mongodb+srv://ritikasah:ritikasah237@cluster0.qpurgmj.mongodb.net
+NODE_ENV=development
+
+SMTP_USER=8a56bb001@smtp-brevo.com
+SMTP_PASS=h29v8qKHtAEp1WC5
+
+SENDER_EMAIL=ritikasah731@gmail.com
