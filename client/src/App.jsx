@@ -23,8 +23,7 @@ const App = () => {
         <Route path='/reset-password' element={<ResetPassword/>}/>  
             
       </Routes>
-      {/* <About/> */}
-     <About/>
+      <About/>
       <Projects/>
       <Testimonials/>
       <Contact/>
