@@ -21,15 +21,20 @@ app.use(cookieParser());
 
 
 
-const allowedOrigins = ['http://localhost:5173', 'https://real-estate-project-backend-xz9f.onrender.com']
+// const allowedOrigins = ['http://localhost:5173', 'https://real-estate-project-backend-xz9f.onrender.com']
 
-app.use(cors(
-  // {
-  // origin: allowedOrigins[0],
-  // credentials: true,
-// }
-));
+// app.use(cors(
+//   // {
+//   // origin: allowedOrigins[0],
+//   // credentials: true,
+// // }
+// ));
 
+
+app.use(cors({
+  origin: 'https://real-estate-project-frontend.onrender.com',
+  credentials: true
+}));
 
 
 // API Endpoints
