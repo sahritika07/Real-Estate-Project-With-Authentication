@@ -6,7 +6,7 @@ export const AppContext = createContext()
 export const AppContextProvider = (props) =>{
 
     axios.defaults.withCredentials = true; // if we refresh the page , the browser will store the cookies which will display the user name only instead of default values
-    const backendUrl = import.meta.env.VITE_BACKEND_URL
+    const backendUrl = "https://real-estate-project-backend-xz9f.onrender.com"
     const [isLoggedin, setIsLoggedin] = useState(false)
     const [userData, setUserData] = useState(false)
     const getAuthState = async() =>{
