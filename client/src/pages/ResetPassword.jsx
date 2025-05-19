@@ -91,7 +91,7 @@ const ResetPassword = () => {
         {!isEmailSent &&
           <form onSubmit={onSubmitEmail} className='bg-slate-900 p-8 rounded-lg shadow-lg w-96 text-sm'>
             <h1 className='text-white text-2xl font-semibold text-center mb-4'>Reset Password</h1>
-            <p className='text-center mb-6 text-indigo-300'>Enter your registered email address</p>
+            <p className='text-center mb-6 text-blue-400'>Enter your registered email address</p>
             <div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-[#333A5C]'>
               <img src={assets.mail_icon} className='w-3 h-3' alt="" />
               <input type="email" className='bg-transparent outline-none text-white' placeholder='Email id' value={email} onChange={(e) => setEmail(e.target.value)} required />
@@ -105,7 +105,7 @@ const ResetPassword = () => {
         {!isOtpSubmitted && isEmailSent &&
           <form onSubmit={onSubmitOTP} className='bg-slate-900 p-8 rounded-lg shadow-lg w-96 text-sm'>
             <h1 className='text-white text-2xl font-semibold text-center mb-4'>Reset Password OTP</h1>
-            <p className='text-center mb-6 text-indigo-300'>Enter the 6 digit code sent to your email id</p>
+            <p className='text-center mb-6 text-blue-400'>Enter the 6 digit code sent to your email id</p>
             <div className='flex justify-between mb-8' onPaste={handlePaste}>
               {Array(6).fill(0).map((_, index) => (
                 <input
@@ -121,7 +121,7 @@ const ResetPassword = () => {
 
               ))}
             </div>
-            <button className='w-full py-2.5 bg-gradient-to-r from-indigo-500 to-indigo-900 rounded-full'>Verify Email</button>
+            <button className='w-full py-2.5 bg-gradient-to-r from-blue-600 to-blue-900 rounded-full'>Verify Email</button>
           </form>
         }
 
@@ -129,13 +129,13 @@ const ResetPassword = () => {
         {isOtpSubmitted && isEmailSent &&
           <form onSubmit={onSubmitNewPassword} className='bg-slate-900 p-8 rounded-lg shadow-lg w-96 text-sm'>
             <h1 className='text-white text-2xl font-semibold text-center mb-4'>New Password</h1>
-            <p className='text-center mb-6 text-indigo-300'>Enter your new password below</p>
+            <p className='text-center mb-6 text-blue-500'>Enter your new password below</p>
             <div className='mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-full bg-[#333A5C]'>
               <img src={assets.lock_icon} className='w-3 h-3' alt="" />
               <input type="password" className='bg-transparent outline-none text-white' placeholder='Password' value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required />
 
             </div>
-            <button className='w-full py-2.5 bg-gradient-to-r from-indigo-500 to-indigo-900 text-white rounded-full mt-3'>Submit</button>
+            <button className='w-full py-2.5 bg-gradient-to-r from-blue-600 to-blue-900 text-white rounded-full mt-3'>Submit</button>
           </form>
         }
 

@@ -55,7 +55,7 @@ const Login = () => {
       <div  className="font-['Times_New_Roman',serif] absolute left-5 sm:left-20 top-5 w-28 sm:w-32 font-extrabold text-2xl text-purple-700 cursor-pointer" onClick={() => navigate('/')}>
        <img src={assets.logo_dark} alt="" />
       </div>
-      <div className='bg-slate-900 p-10 rounded-lg shadow-lg w-full sm:w-96 text-indigo-300 text-sm'>
+      <div className='bg-slate-900 p-10 rounded-lg shadow-lg w-full sm:w-96 text-blue-400 text-sm'>
         <h2 className='text-3xl font-semibold text-white text-center mb-3'>{state === 'Sign Up' ? 'Create account' :'Login'}</h2>
         <p className='text-center text-sm mb-6'>{state === 'Sign Up' ? 'Create your account' :'Login to your account!'}</p>
         <form onSubmit={onSubmitHandler} >
@@ -80,7 +80,7 @@ const Login = () => {
              onChange={e => setPassword(e.target.value)} 
              value={password} className='bg-transparent outline-none' type="password" placeholder='Password' required/>
           </div>
-          <p onClick={() => navigate('/reset-password')} className='mb-4 text-indigo-500 cursor-pointer'>Forgot Password?</p>
+          <p onClick={() => navigate('/reset-password')} className='mb-4 text-blue-500 cursor-pointer'>Forgot Password?</p>
           {/* <button className='w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900 text-white font-medium'>{state}</button> */}
           <button className='w-full py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-900 text-white font-medium'>{state}</button>
         </form>
