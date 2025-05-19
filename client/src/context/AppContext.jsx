@@ -1,5 +1,6 @@
 import { createContext, useState , useEffect } from "react";
-import axios from 'axios'
+import axios from 'axios';
+import Cookies from 'js-cookie';
 import { toast } from "react-toastify";
 
 export const AppContext = createContext()
@@ -23,14 +24,30 @@ export const AppContextProvider = (props) =>{
         }
     }
 
-    const getUserData = async()=>{
-        try {
-            const {data} = await axios.get(backendUrl + '/api/user/data')
-            data.success ? setUserData(data.userData): toast.error(data.message)
-        } catch (error) {
-            toast.error(error.message)
-        }
+    // const getUserData = async()=>{
+    //     try {
+    //         const {data} = await axios.get(backendUrl + '/api/user/data')
+    //         data.success ? setUserData(data.userData): toast.error(data.message)
+    //     } catch (error) {
+    //         toast.error(error.message)
+    //     }
+    // }
+
+    const getUserData = async () => {
+    try {
+        const token = Cookies.get('token'); // Replace 'token' with your actual cookie name
+
+        const { data } = await axios.get(backendUrl + '/api/user/data', {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
+
+        data.success ? setUserData(data.userData) : toast.error(data.message);
+    } catch (error) {
+        toast.error(error.message);
     }
+};
 
     useEffect(() => {
       getAuthState();
