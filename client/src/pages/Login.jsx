@@ -50,7 +50,7 @@ const Login = () => {
   }
   
   return (
-    <div className='flex items-center min-h-screen justify-center px-6 sm:px-0 bg-gradient-to-br from-blue-200 to-purple-400 '>
+    <div className='flex items-center min-h-screen justify-center px-6 sm:px-0 bg-gradient-to-br from-blue-200 to-blue-400 '>
       {/* <img onClick={() => navigate('/')} src={assets.logo} className='absolute left-5 sm:left-20 top-5 w-28 sm:w-32 cursor-pointer'/> */}
       <div  className="font-['Times_New_Roman',serif] absolute left-5 sm:left-20 top-5 w-28 sm:w-32 font-extrabold text-2xl text-purple-700 cursor-pointer" onClick={() => navigate('/')}>
        <img src={assets.logo_dark} alt="" />
@@ -81,7 +81,8 @@ const Login = () => {
              value={password} className='bg-transparent outline-none' type="password" placeholder='Password' required/>
           </div>
           <p onClick={() => navigate('/reset-password')} className='mb-4 text-indigo-500 cursor-pointer'>Forgot Password?</p>
-          <button className='w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900 text-white font-medium'>{state}</button>
+          {/* <button className='w-full py-2.5 rounded-full bg-gradient-to-r from-indigo-500 to-indigo-900 text-white font-medium'>{state}</button> */}
+          <button className='w-full py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-blue-900 text-white font-medium'>{state}</button>
         </form>
         {state === 'Sign Up' ? (
           <p className='text-gray-400 text-center text-xs mt-4'>Already have an account? {'  '}

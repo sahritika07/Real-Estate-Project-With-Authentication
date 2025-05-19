@@ -68,7 +68,7 @@ const EmailVerify = () => {
 
 
   return (
-    <div className='flex items-center min-h-screen justify-center  bg-gradient-to-br from-blue-200 to-purple-400'>
+    <div className='flex items-center min-h-screen justify-center  bg-gradient-to-br from-blue-200 to-blue-400'>
        {/* <img onClick={() => navigate('/')} src={assets.logo} className='absolute left-5 sm:left-20 top-5 w-28 sm:w-32 cursor-pointer'/> */}
        <div  className="font-['Times_New_Roman',serif] absolute left-5 sm:left-20 top-5 w-28 sm:w-32 font-extrabold text-2xl text-purple-700 cursor-pointer" onClick={() => navigate('/')}>
         <img src={assets.logo_dark} alt="" />
@@ -91,7 +91,7 @@ const EmailVerify = () => {
               
             ))}
         </div>
-        <button className='w-full py-3 bg-gradient-to-r from-indigo-500 to-indigo-900 rounded-full'>Verify Email</button>
+        <button className='w-full py-3 bg-gradient-to-r from-blue-600 to-blue-900 rounded-full'>Verify Email</button>
        </form>
 
          
